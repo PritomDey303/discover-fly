@@ -1,6 +1,8 @@
+////////////////////////////////////////////////////////////
 //ticketCount Function
+////////////////////////////////////////////////////////////
 
-function ticketCount(binary,seat){
+function ticketCount(binary,seat,totalPrice){
     //Getting first class and economy input values
 
     let firstClass=document.getElementById("first_class");
@@ -44,16 +46,17 @@ function ticketCount(binary,seat){
         }
     }   
 
-    //calling totalAmount Function
-    
-    totalAmount();
+    //calling totalPrice Callback Function
+
+    totalPrice();
 }
 
 
 
 
-
+//////////////////////////////////////////////////////////////////////
 //totalAmount Function
+/////////////////////////////////////////////////////////////////////
 
 function totalAmount(){
    
@@ -97,9 +100,9 @@ function totalAmount(){
 }
 
 
-
+/////////////////////////////////////////////////////////////////////
 //alertMsg function
-
+/////////////////////////////////////////////////////////////////////
 function alertMsg(){
     //declaring variables
     let flyingFrom=document.getElementById("flying_from").value;

@@ -54,7 +54,7 @@
                     <input onchange="totalAmount()" class="inp-style inp-width" type="text" name="" value="0" id="first_class">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span onclick="ticketCount(true,'f_class')">+</span> <span onclick="ticketCount(false,'f_class')">-</span> </p>
+                    <p> <span onclick="ticketCount(true,'f_class',totalAmount)">+</span> <span onclick="ticketCount(false,'f_class',totalAmount)">-</span> </p>
                 </div>
             </div>
             
@@ -64,7 +64,7 @@
                     <input onchange="totalAmount()" class="inp-style inp-width" type="text" name="" value="0" id="economy_class">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span onclick="ticketCount(true,'e_class')">+</span> <span onclick="ticketCount(false,'e_class')">-</span> </p>
+                    <p> <span onclick="ticketCount(true,'e_class',totalAmount)">+</span> <span onclick="ticketCount(false,'e_class',totalAmount)">-</span> </p>
                 </div>
             </div>
             <div class="calculations">
