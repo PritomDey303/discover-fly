@@ -134,6 +134,4 @@ function alertMsg(){
         alert("Congratulation! You have successfully purchased tickets.");
     }
     
-    
-    
 }
