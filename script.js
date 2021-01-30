@@ -15,14 +15,12 @@ function ticketCount(binary,seat,totalPrice){
         let temp=firstClass.value;
         temp=parseInt(temp);
 
-        if(binary==true){
+        if(binary===true){
             firstClass.value=temp+1;
         }
-
         else{
             if(firstClass.value>0){
                 firstClass.value=temp-1;
-
             }
         }
     }
@@ -34,7 +32,7 @@ function ticketCount(binary,seat,totalPrice){
         let temp=economyClass.value;
         temp=parseInt(temp);
 
-        if(binary==true){
+        if(binary===true){
             economyClass.value=temp+1;
         }
 
@@ -51,9 +49,6 @@ function ticketCount(binary,seat,totalPrice){
     totalPrice();
 }
 
-
-
-
 //////////////////////////////////////////////////////////////////////
 //totalAmount Function
 /////////////////////////////////////////////////////////////////////
@@ -61,7 +56,6 @@ function ticketCount(binary,seat,totalPrice){
 function totalAmount(){
    
     //Declaring necessary variables
-
     let first_class=document.getElementById("first_class");
     first_ticket=parseFloat(first_class.value);
 
@@ -96,13 +90,12 @@ function totalAmount(){
     //calculating amount
     let tempAmount=tempVat+tempSubtotal;
     amount.innerText=`$${tempAmount}`;
-
 }
-
 
 /////////////////////////////////////////////////////////////////////
 //alertMsg function
 /////////////////////////////////////////////////////////////////////
+
 function alertMsg(){
     //declaring variables
     let flyingFrom=document.getElementById("flying_from").value;
@@ -114,33 +107,44 @@ function alertMsg(){
     firstClass=parseInt(firstClass);
 
     let economyClass=document.getElementById("economy_class").value;
-    economyClass=parseInt(firstClass);
+    economyClass=parseInt(economyClass);
+
     let alert=document.getElementById("alert");
     alert.style.display="block";
+        
     let alertText=document.getElementById("alert_txt");
 
     //checking empty or invalid values
-   
-    if(flyingFrom==""){
+    if(flyingFrom===""){
+        alert.style.backgroundColor="red";
         alertText.innerText="Please Enter Flying From option.";
-        
     }
-    else if(destination==""){
+    else if(destination===""){
+        alert.style.backgroundColor="red";
         alertText.innerText="Please Enter Flying To option.";
     }
-    else if(departure==""){
+    else if(departure===""){
+        alert.style.backgroundColor="red";
         alertText.innerText="Please Enter Departure option.";
     }
-    else if(returning==""){
+    else if(returning===""){
+        alert.style.backgroundColor="red";
         alertText.innerText="Please Enter Return From option.";
     }
-    else if(firstClass==0 && economyClass==0){
+    else if(firstClass===0 && economyClass===0){
+        alert.style.backgroundColor="red";
         alertText.innerText="You haven't booked any ticket.";
     }
     else{
-        
-        alertText.innerText=`Congratulations!  You have successfully purchased ${firstClass+economyClass} tickets.`;
         alert.style.backgroundColor="#4BB543";   
+        alertText.innerText=`Congratulations!  You have successfully purchased ${firstClass+economyClass} tickets.`;
      }
-    
+}
+
+/////////////////////////////////////////////////////////////////////
+//hide alert function
+/////////////////////////////////////////////////////////////////////
+
+function hideAlert(event){
+    event.target.parentElement.style.display="none";
 }
