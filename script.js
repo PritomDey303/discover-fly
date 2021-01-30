@@ -109,29 +109,38 @@ function alertMsg(){
     let destination=document.getElementById("destination").value;
     let departure=document.getElementById("departure").value;
     let returning=document.getElementById("return").value;
+
     let firstClass=document.getElementById("first_class").value;
+    firstClass=parseInt(firstClass);
+
     let economyClass=document.getElementById("economy_class").value;
+    economyClass=parseInt(firstClass);
+    let alert=document.getElementById("alert");
+    alert.style.display="block";
+    let alertText=document.getElementById("alert_txt");
 
     //checking empty or invalid values
-
+   
     if(flyingFrom==""){
-        alert("Please enter Flying From option.");
+        alertText.innerText="Please Enter Flying From option.";
+        
     }
     else if(destination==""){
-        alert("Please enter Flying To option.");
+        alertText.innerText="Please Enter Flying To option.";
     }
     else if(departure==""){
-        alert("Please enter departure To option.");
+        alertText.innerText="Please Enter Departure option.";
     }
     else if(returning==""){
-        alert("Please enter return To option.");
+        alertText.innerText="Please Enter Return From option.";
     }
     else if(firstClass==0 && economyClass==0){
-        alert("You have not booked any ticket.");
+        alertText.innerText="You haven't booked any ticket.";
     }
     else{
         
-        alert("Congratulation! You have successfully purchased tickets.");
-    }
+        alertText.innerText=`Congratulations!  You have successfully purchased ${firstClass+economyClass} tickets.`;
+        alert.style.backgroundColor="#4BB543";   
+     }
     
 }

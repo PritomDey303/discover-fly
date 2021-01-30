@@ -125,3 +125,37 @@ nav ul li a:hover, a.active{
 }
 
 
+/* The alert message box */
+.alert {
+  display: none;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+/* The close button */
+.closebutton {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+/* When moving the mouse over the close button */
+.closebutton:hover {
+  color: black;
+}
